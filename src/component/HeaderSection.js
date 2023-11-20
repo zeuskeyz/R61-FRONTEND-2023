@@ -4,7 +4,7 @@ import Axios from "axios"
 export const HeaderSection = () => {
 
   let handleClick = (event)=>{
-    Axios.get('http://localhost:3001').then(res=>{
+    Axios.get('https://rate-me-zpzf.onrender.com').then(res=>{
       isNaN(res.data.NPS) ? event.target.innerText = `Give feedback first!`: event.target.innerText = `Current NPS : ${res.data.NPS}%`
     }).catch(err=>alert(err.message))
   }

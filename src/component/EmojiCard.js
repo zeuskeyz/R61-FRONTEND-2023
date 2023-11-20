@@ -7,7 +7,7 @@ export const EmojiCard = ({verdict, emoji, expression, id}) => {
    
   const handleClick = (event)=>{
     setType(event.target.id)
-    Axios.post('http://localhost:3001/', {type}).then().catch(err=> {return <Alert variant="success">{err.message}</Alert>})    
+    Axios.post('https://rate-me-zpzf.onrender.com/', {type}).then().catch(err=> {return <Alert variant="success">{err.message}</Alert>})    
   }
 
   return (
