@@ -16,7 +16,7 @@ export const Results = () => {
       <Row>
         <Col className="mb-2 text-center">
         <ToastContainer className="p-3" position='bottom-center' style={{ zIndex: 1 }}>
-            <Toast onClose={toggleShow} show={show} animation={false}>
+            <Toast onClose={toggleShow} show={show} animation={false} bg="warning">
                 <Toast.Header>
                     <img src="holder.js/20x20?text=%20" className="rounded me-2" alt=""/>
                     <strong className="me-auto">R61</strong>
@@ -25,10 +25,10 @@ export const Results = () => {
                 <Toast.Body>
                     <h5>Safaricom, Retail Center Migori</h5>
                     <br/>
-                    <p>DETRACTORS: {stats.detractors}</p>
-                    <p>PROMOTERS: {stats.promoters}</p>
-                    <p>PASSIVES: {stats.passives}</p>
-                    <p>RESPONSES: {stats.responses}</p>
+                    <p className="fs-5 fw-bold">DETRACTORS: {stats.detractors}</p>
+                    <p className="fs-5 fw-bold">PROMOTERS: {stats.promoters}</p>
+                    <p className="fs-5 fw-bold">PASSIVES: {stats.passives}</p>
+                    <p className="fs-5 fw-bold">RESPONSES: {stats.responses}</p>
                     <br/>
                     <h5>CURRENT NPS SCORE : {isNaN(stats.nps) ? `No Data`: stats.nps}%</h5>
                 </Toast.Body>
