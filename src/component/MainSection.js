@@ -5,9 +5,9 @@ import { EmojiCard } from "./EmojiCard";
 export const MainSection = () => {
 
     let feedbacks = [
-        {id:'promoter', verdict:'EXCELLENT SERVICE!', emoji: <BsEmojiSmileFill className='text-warning' style={{fontSize:'200%'}} id='promoter' />, expression:'I am very happy with the customer service I was given!'},
-        {id:'passive', verdict:'AVERAGE SERVICE!', emoji: <BsEmojiExpressionlessFill className='text-warning' style={{fontSize:'200%'}} id='passive'/>, expression:'The customer service I got is ok but it can get better'},
-        {id:'detractor', verdict:'POOR SERVICE!', emoji: <BsEmojiFrownFill className='text-warning' style={{fontSize:'200%'}} id='detractor'/>, expression:'I am not happy with the customer service I got.'}
+        {id:'promoter', verdict:'EXCELLENT SERVICE!', emoji: <BsEmojiSmileFill className='text-warning' style={{fontSize:'250%'}}  id='promoter' />, expression:'I am very happy with the customer service I was given!'},
+        {id:'passive', verdict:'AVERAGE SERVICE!', emoji: <BsEmojiExpressionlessFill className='text-warning' style={{fontSize:'250%'}} id='passive'/>, expression:'The customer service I got is ok but it can get better'},
+        {id:'detractor', verdict:'POOR SERVICE!', emoji: <BsEmojiFrownFill className='text-warning' style={{fontSize:'250%'}} id='detractor'/>, expression:'I am not happy with the customer service I got.'}
     ]
   
     return (
