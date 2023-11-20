@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HeaderSection } from './component/HeaderSection';
+import { Narrations } from './component/Narrations';
+import { MainSection } from './component/MainSection';
+import { FooterSection } from './component/FooterSection';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <>
+          <HeaderSection/>
+          <Narrations text = {'How would you rate our services today ?'}/>
+          <MainSection/>
+          <Narrations text = {'Thank you and Welcome back!'}/>
+          <FooterSection/>
+
+        </>
+    )
 }
 
-export default App;
+export default App
