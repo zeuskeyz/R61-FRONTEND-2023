@@ -5,7 +5,8 @@ export const HeaderSection = () => {
 
   let handleClick = (event)=>{
     Axios.get('https://rate-me-zpzf.onrender.com').then(res=>{
-      isNaN(res.data.NPS) ? event.target.innerText = `No Data`: event.target.innerText = `NPS : ${res.data.NPS}%`
+      console.log(res.data)
+      isNaN(res.data.nps) ? event.target.innerText = `No Data`: event.target.innerText = `NPS : ${res.data.nps}%`
     }).catch(err=>alert(err.message))
   }
 

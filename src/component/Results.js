@@ -25,12 +25,12 @@ export const Results = () => {
                 <Toast.Body>
                     <h5>Safaricom, Retail Center Migori</h5>
                     <br/>
-                    <p>DETRACTORS: 20</p>
-                    <p>PROMOTERS: 20</p>
-                    <p>PASSIVES: 20</p>
-                    <p>RESPONSES: 20</p>
+                    <p>DETRACTORS: {stats.detractors}</p>
+                    <p>PROMOTERS: {stats.promoters}</p>
+                    <p>PASSIVES: {stats.passives}</p>
+                    <p>RESPONSES: {stats.responses}</p>
                     <br/>
-                    <h5>CURRENT NPS SCORE : {stats.NPS}%</h5>
+                    <h5>CURRENT NPS SCORE : {isNaN(stats.nps) ? `No Data`: stats.nps}%</h5>
                 </Toast.Body>
             </Toast>
           </ToastContainer>
