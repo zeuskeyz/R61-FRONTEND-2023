@@ -4,7 +4,7 @@ import { BsEnvelopeAtFill, BsWhatsapp, BsTelephoneOutbound } from "react-icons/b
 export const FooterSection = () => {
   return (
     <>
-      <Navbar fixed = 'bottom' bg="dark" data-bs-theme="dark">
+      <Navbar className='d-none d-md-block' fixed = 'bottom' bg="dark" data-bs-theme="dark">
         <Container>
           <Nav className="">
             <Nav.Link href="#" className="text-secondary"> Media  </Nav.Link>

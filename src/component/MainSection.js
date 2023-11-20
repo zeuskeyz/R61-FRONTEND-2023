@@ -12,14 +12,14 @@ export const MainSection = () => {
   
     return (
         <Container >
-        <Row className="gy-1">
-            {feedbacks.map((feedback,index) => (
-                <Col className="col-12 col-md-4" key={index} >
-                    <EmojiCard verdict={feedback.verdict} emoji={feedback.emoji} expression={feedback.expression} id={feedback.id}/>
-                </Col>
-            ))}
-            
-        </Row>
+            <Row className="gy-1">
+                {feedbacks.map((feedback,index) => (
+                    <Col className="col-12 col-md-4" key={index} >
+                        <EmojiCard verdict={feedback.verdict} emoji={feedback.emoji} expression={feedback.expression} id={feedback.id}/>
+                    </Col>
+                ))}
+                
+            </Row>
         </Container>
     );
 };

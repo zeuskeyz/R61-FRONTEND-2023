@@ -3,6 +3,7 @@ import { HeaderSection } from './component/HeaderSection';
 import { Narrations } from './component/Narrations';
 import { MainSection } from './component/MainSection';
 import { FooterSection } from './component/FooterSection';
+import { Results } from './component/Results';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
           <HeaderSection/>
           <Narrations text = {'How would you rate our services today ?'}/>
           <MainSection/>
-          <Narrations text = {'Thank you and Welcome back!'}/>
+          <Results/>
           <FooterSection/>
 
         </>
