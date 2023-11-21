@@ -6,7 +6,6 @@ import { FooterSection } from './component/FooterSection';
 import { Results } from './component/Results';
 
 function App() {
-
     return (
         <>
           <HeaderSection/>
@@ -14,7 +13,6 @@ function App() {
           <MainSection/>
           <Results/>
           <FooterSection/>
-
         </>
     )
 }
