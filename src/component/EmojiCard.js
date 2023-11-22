@@ -1,6 +1,8 @@
-import { Alert, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { useState } from "react";
 import Axios from "axios"
+import { toast } from "sonner";
+
 
 export const EmojiCard = ({verdict, emoji, expression, id}) => {
 
@@ -9,7 +11,8 @@ export const EmojiCard = ({verdict, emoji, expression, id}) => {
    
   const handleClick = (event)=>{
     setType(event.target.id)
-    Axios.post('https://rate-me-zpzf.onrender.com', {type}).then().catch(err=> {return <Alert variant="success">{err.message}</Alert>}) 
+    Axios.post('https://rate-me-zpzf.onrender.com', {type})
+    .catch(err => err ? toast.error(`${err.code}: ${err.message}`, {toastId:'error1'}) : toast.success(`Thank you for your feedback!`, {toastId:'success1'})) 
   }
 
   const handleMouseIn = () => setStyles({backgroundColor: 'transparent', color: 'black', border: '2px solid black'})

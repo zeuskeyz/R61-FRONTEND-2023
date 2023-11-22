@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import Axios from 'axios'
 import { Navbar, Container, Nav} from "react-bootstrap";
+import { toast } from 'sonner'
 
 export const FooterSection = () => {
   let [data, setData] = useState({});
 
   useEffect(() => {
-    Axios.get('https://rate-me-zpzf.onrender.com').then(res=>setData(res.data)).catch(err=>alert(err.message))
+    Axios.get('https://rate-me-zpzf.onrender.com').then(res=>setData(res.data)).catch(err=>toast.error(`${err.code} : ${err.message}`, {toastId:'error2'}))
   }, [data])
   
   return (

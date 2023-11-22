@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Col, Row, Container, ToastContainer, Button, Toast } from "react-bootstrap";
 import Axios from "axios"
+import { toast } from 'sonner'
 
 export const Results = () => {
   const [show, setShow] = useState(false);
   const [stats, setStats] = useState({})
 
   const toggleShow = () => {
-    Axios.get('https://rate-me-zpzf.onrender.com').then(res=>{setStats(res.data)}).catch(err=>alert(err.message))
-    setShow(!show)
-};
+    Axios.get('https://rate-me-zpzf.onrender.com').then(res=>setStats(res.data)).catch(err=>{toast.error(`${err.code} : ${err.message}`, {toastId:'error3'});})
+      setShow(!show);
+  }
 
   return (
     <Container className='d-md-none'>

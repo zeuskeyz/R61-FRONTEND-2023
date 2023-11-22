@@ -4,10 +4,12 @@ import { Narrations } from './component/Narrations';
 import { MainSection } from './component/MainSection';
 import { FooterSection } from './component/FooterSection';
 import { Results } from './component/Results';
+import { Toaster } from "sonner";
 
 function App() {
     return (
         <>
+          <Toaster richColors position='bottom-right' />
           <HeaderSection/>
           <Narrations text = {'How would you rate our services today ?'}/>
           <MainSection/>
