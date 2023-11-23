@@ -12,7 +12,8 @@ export const EmojiCard = ({verdict, emoji, expression, id}) => {
   const handleClick = (event)=>{
     setType(event.target.id)
     Axios.post('https://rate-me-zpzf.onrender.com', {type})
-    .catch(err => err ? toast.error(`${err.code}: ${err.message}`, {toastId:'error1'}) : toast.success(`Thank you for your feedback!`, {toastId:'success1'})) 
+    .then(toast.success(`Thank you for your feedback!`, {toastId:'success1'}))
+    .catch(err =>toast.error(`${err.code}: ${err.message}`, {toastId:'error1'})) 
   }
 
   const handleMouseIn = () => setStyles({backgroundColor: 'transparent', color: 'black', border: '2px solid black'})
